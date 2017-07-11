@@ -8,4 +8,6 @@
 3. https://arxiv.org/pdf/1604.07446.pdf
 4. http://ais.informatik.uni-freiburg.de/teaching/ss15/robotics/slides/19-pathplanning.pdf (very good on path planning)
 5. http://www.cs.cmu.edu/~./motionplanning/
+6. Get "Introduction to Algorithms, Third Edition" from Scribd as well as any other books before closing that account
+    - This book in used in both 6.006 and 6.046 at MIT
 
