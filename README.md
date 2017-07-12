@@ -13,3 +13,5 @@
 7. Robert Sedgewick's Algorithms book and Coursera course. The book is easier to understand than the MIT book
 
 
+# Probability/Naive Bayes
+1. https://www.autonlab.org/tutorials/index.html (from CMU)
