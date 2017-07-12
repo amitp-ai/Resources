@@ -15,3 +15,5 @@
 
 # Probability/Naive Bayes
 1. https://www.autonlab.org/tutorials/index.html (from CMU)
+2. http://www.cs.ubbcluj.ro/~gabis/ml/ml-books/McGrawHill%20-%20Machine%20Learning%20-Tom%20Mitchell.pdf
+(Good book on ML)
