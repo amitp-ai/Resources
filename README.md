@@ -11,7 +11,7 @@
 6. Get "Introduction to Algorithms, Third Edition" from Scribd as well as any other books before closing that account
     - This book in used in both 6.006 and 6.046 at MIT
 7. Robert Sedgewick's Algorithms book and Coursera course. The book is easier to understand than the MIT book
-
+8. Intro to AI for Robotics: http://www.profesaulosuna.com/data/files/ROBOTICA/ROBOTICS%20EBOOKS/Introduction%20to%20AI%20Robotics.pdf
 
 # Probability/Naive Bayes
 1. https://www.autonlab.org/tutorials (from CMU)
