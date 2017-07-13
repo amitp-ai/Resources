@@ -15,5 +15,8 @@
 
 # Probability/Naive Bayes
 1. https://www.autonlab.org/tutorials/index.html (from CMU)
-2. http://www.cs.ubbcluj.ro/~gabis/ml/ml-books/McGrawHill%20-%20Machine%20Learning%20-Tom%20Mitchell.pdf
-(Good book on ML)
+2. http://www.cs.ubbcluj.ro/~gabis/ml/ml-books/McGrawHill%20-%20Machine%20Learning%20-Tom%20Mitchell.pdf (Good book on ML)
+3. http://www.cs.cmu.edu/~tom/mlbook/NBayesLogReg.pdf (Good on Naive Bayes)
+4. http://www.cs.cmu.edu/~tom/mlbook/Joint_MLE_MAP.pdf (Good for MLE and MAP)
+5. http://www.cs.cmu.edu/~tom/ (good site that has links to all of the above)
+
