@@ -21,3 +21,7 @@
 4. http://www.cs.cmu.edu/~tom/mlbook/Joint_MLE_MAP.pdf (Good for MLE and MAP)
 5. http://www.cs.cmu.edu/~tom/ (good site that has links to all of the above)
 
+
+# Machine Learning (ADI Class References)
+1. http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/090310.pdf
+2. https://web.stanford.edu/~hastie/Papers/ESLII.pdf
