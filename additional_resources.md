@@ -1,4 +1,4 @@
-Basics
+## Basics
 
 ML Crash Course https://ml.berkeley.edu/blog/2016/11/06/tutorial-1/
 
@@ -13,7 +13,7 @@ Reference for math/probability: chapter 2, 3 and 4 of http://www.deeplearningboo
 Tensorflow Crash Course: http://nicklocascio.com/tensorflow-crash-course
 
 
-Deep Learning, foundations
+## Deep Learning, foundations
 
 Intro-level deep learning book: http://neuralnetworksanddeeplearning.com/
 
@@ -26,7 +26,7 @@ Deep Learning/TensorFlow Udacity Course: https://www.udacity.com/course/deep-lea
 Yann LeCun’s ‘Efficient Backpropagation’ (goes through a lot of basics on how/why to train networks a certain way, including some theory behind it): yann.lecun.com/exdb/publis/pdf/lecun-98b.pdf
 
 
-Deep Learning, advanced/state-of-the-art: 
+## Deep Learning, advanced/state-of-the-art: 
 
 Guide to Papers: https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap
 
@@ -34,13 +34,13 @@ Curating arXiv: arxiv-sanity.com
 
 Summaries of Papers: http://www.shortscience.org/
 
-Papers from Conferences: 
+## Papers from Conferences: 
 NIPS: https://nips.cc/Conferences/2016/AcceptedPapers
 ICLR: https://openreview.net/group?id=ICLR.cc/2017/conference
 ICML: http://icml.cc/2016/?page_id=1649
 KDD: http://www.kdd.org/kdd2016/program/accepted-papers
 
-Blogs etc: 
+## Blogs etc: 
 
 Deep Learning Newsletter: http://www.wildml.com/newsletter/
 
@@ -51,7 +51,7 @@ Andrej Karpathy’s blog: http://karpathy.github.io/
 Chris Olah’s blog: http://colah.github.io/
 
 
-More on specific topics: 
+## More on specific topics: 
 
 RNNs / Sequential Modeling: 
 Attention & Memory: http://distill.pub/2016/augmented-rnns/
@@ -75,8 +75,6 @@ Reinforcement Learning:
 
 ## Good Resources
 1. http://aiplaybook.a16z.com/
-2. http://karpathy.github.io/
-
 
  
 
