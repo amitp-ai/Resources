@@ -73,6 +73,10 @@ Generative Models:
 Reinforcement Learning: 
 
 
+## Good Resources
+1. http://aiplaybook.a16z.com/
+2. http://karpathy.github.io/
+
 
  
 
