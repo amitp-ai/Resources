@@ -1,5 +1,8 @@
 # Resources
 
+# Algorithms
+https://interactivepython.org/runestone/static/pythonds/index.html
+
 # Deep Learning:
 1. MIT's http://introtodeeplearning.com 
 
