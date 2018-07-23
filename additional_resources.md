@@ -31,6 +31,7 @@ Yann LeCun’s ‘Efficient Backpropagation’ (goes through a lot of basics on 
 
 
 ## Deep Learning, advanced/state-of-the-art: 
+Good on Advanced Deep Learning http://slazebni.cs.illinois.edu/spring17/#schedule
 
 Guide to Papers: https://github.com/songrotek/Deep-Learning-Papers-Reading-Roadmap
 
