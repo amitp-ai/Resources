@@ -2,6 +2,8 @@
 
 Good book on Machine Learning from UCL http://web4.cs.ucl.ac.uk/staff/D.Barber/textbook/090310.pdf
 
+Good on Back Propagation: https://gluon.mxnet.io/chapter18_variational-methods-and-uncertainty/bayes-by-backprop.html
+
 ML Crash Course https://ml.berkeley.edu/blog/2016/11/06/tutorial-1/
 
 Cross entropy http://colah.github.io/posts/2015-09-Visual-Information/
