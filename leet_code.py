@@ -241,27 +241,4 @@ myHeap.delete()
 
 
 
-print('\n\n\nFirecode')
 
-def min_jumps(array):
-    n = len(array)-1
-    queue = []
-    node = (0,0) #(pos,step)
-    queue.append(node)
-    while queue != []:
-        node = queue.pop(0)
-        if node[0] == n:
-            break
-        else:
-            val = array[node[0]]
-            for i in range(node[0]+1, node[0]+val+1):
-                if i <= n:
-                    child_node = (i,node[1]+1)
-                    queue.append(child_node)
-                else:
-                    break
-    return node[1]
-
-array = [2,5,7,8,9,12]
-array = [2,1,1,1,1,12,15]
-print(min_jumps(array))
