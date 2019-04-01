@@ -1,33 +1,46 @@
 # Test Code
 '''
-For those who aren't familiar with Boyer-Moore Majority Vote algorithm,
-I found a great article (http://goo.gl/64Nams) that helps me to understand this fantastic algorithm!!
-Please check it out!
+def majority_element(array):
+    #Using Boyer-Moore Majority Vote algorithm.
+    #Can find results in O(N) time complexity and O(1) space complexity (http://goo.gl/64Nams)
+    #Its a 2 steps process: part a and part b
 
-The essential concepts is you keep a counter for the majority number X. If you find a number Y that is not X, the current counter should deduce 1. The reason is that if there is 5 X and 4 Y, there would be one (5-4) more X than Y. This could be explained as "4 X being paired out by 4 Y".
-
-And since the requirement is finding the majority for more than ceiling of [n/3], the answer would be less than or equal to two numbers.
-So we can modify the algorithm to maintain two counters for two majorities.
-
-Followings are my sample Python code:
- '''
-class Solution:
-# @param {integer[]} nums
-# @return {integer[]}
-def majorityElement(self, nums):
-    if not nums:
-        return []
-    count1, count2, candidate1, candidate2 = 0, 0, 0, 1
-    for n in nums:
-        if n == candidate1:
+    #1a. find majority > len(array)//2 (there will be at most 1 number)
+    count1, candidate1 = 0, 999
+    for num in array:
+        if num == candidate1:
             count1 += 1
-        elif n == candidate2:
+        elif count1 == 0:
+            candidate1 = num
+            count1 += 1
+        else:
+            count1 -= 1
+    print(candidate1, count1)
+    #2b. Then verify if candidate1 really is majority by going through the entire array again
+
+    #2a. find majority > len(array)//3 (there will be at most 2 numbers)
+    count1, candidate1 = 0, 999
+    count2, candidate2 = 0, 999
+    for num in array:
+        if num == candidate1:
+            count1 += 1
+        elif num == candidate2:
             count2 += 1
         elif count1 == 0:
-            candidate1, count1 = n, 1
+            candidate1 = num
+            count1 += 1
         elif count2 == 0:
-            candidate2, count2 = n, 1
+            candidate2 = num
+            count2 += 1
         else:
-            count1, count2 = count1 - 1, count2 - 1
-    return [n for n in (candidate1, candidate2)
-                    if nums.count(n) > len(nums) // 3]
+            count1 -= 1
+            count2 -= 1
+    print(candidate1, count1, candidate2, count2)
+     #2b. Then verify if candidate1/candidate2 really are majority by going through the entire array again
+
+
+array = [1,2,3,4,5,6,7,1]
+array = [1,2,1,1,1,3,4,2,1,2,1,1,2,2,6]
+array = [1,2,1,1,1,3,4,2,1,2,1,1,2,-2,6]
+array = [1,2,3]
+majority_element(array)
