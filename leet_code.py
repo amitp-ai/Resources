@@ -1,82 +1,66 @@
 # Test Code
 
 
-def find_largest_square_slow(input_matrix):
-    def max_square_from_ij(i,j, input_matrix):
-        max_sqr_size = min(len(input_matrix)-i, len(input_matrix[0])-j)
-        curr_max = 0
-        curr_size = curr_max
-        break_flag = False
-        for sqr_size in range(1,max_sqr_size+1):
-            for right in range(sqr_size):
-                for down in range(sqr_size):
-                    if input_matrix[i+right][j+down] == 0:
-                        break_flag = True
-                    if break_flag: break
-                if break_flag: break
-            if break_flag:
-                curr_size = sqr_size-1
-                break
-            else:
-                curr_size = sqr_size
-        if curr_size > curr_max:
-            curr_max = curr_size
-        return curr_max
-    
-    max_sqr_size = 0
-    for i in range(len(input_matrix)):
-        for j in range(len(input_matrix[0])):
-            tmp = max_square_from_ij(i,j,input_matrix)
-            if tmp > max_sqr_size:
-                max_sqr_size = tmp
-    return max_sqr_size**2
+def unique_routes_dfs(rows,cols):
+    #start from top left and end at bot right
+    #using DP is most efficient
+    #can only go right and down
+
+    #using DFS
+    node = (0,0)
+    stack = []
+    stack.append(node)
+    num_paths = 0
+    while stack != []:
+        node = stack.pop()
+        i,j = node
+        if node == (rows-1,cols-1):
+            num_paths += 1
+        if i+1 < rows:
+            new_node = (i+1,j)
+            stack.append(new_node)
+        if j+1 < cols:
+            new_node = (i,j+1)
+            stack.append(new_node)
+    return num_paths
+
+def unique_routes_DP(rows,cols):
+    #Using DP where the value of each state corresponds to the number of unique paths from that state tot he end state
+    #value iteration based approach (still O(N) but little slower)
+    #initialize the state values
+    values = [[0 for c in range(cols)] for r in range(rows)]
+    values[rows-1][cols-1] = 1
+    num_iters = 1 #1 is good enough as we are building the state value function from the target
+    for _ in range(num_iters):
+        for r in range(rows-1,-1,-1): #(rows):
+            for c in range(cols-1,-1,-1): #(cols):
+                temp_right = 0
+                temp_down = 0
+                #right
+                if c+1 < cols:
+                    temp_right = values[r][c+1]
+                #down
+                if r+1 < rows:
+                    temp_down = values[r+1][c]
+                if (r,c) != (rows-1,cols-1):
+                    values[r][c] = temp_down + temp_right
+        #print(values)
+    return values[0][0]
 
 
-def find_largest_square(input_matrix):
-    def max_square_from_ij(i,j, input_matrix):
-        max_sqr_size = min(len(input_matrix)-i, len(input_matrix[0])-j)
-        curr_max = 0
-        curr_size = curr_max
-        break_flag = False
-        for sqr_size in range(1,max_sqr_size+1):
-            for down in range(sqr_size):
-                if input_matrix[i+down][j+sqr_size-1] == 0:
-                    break_flag = True
-                if break_flag: break
-            if break_flag: break
-            
-            for right in range(sqr_size):
-                if input_matrix[i+sqr_size-1][j+right] == 0:
-                    break_flag = True
-                if break_flag: break
-            if break_flag: break
+rows=5
+cols=5
+print(unique_routes_dfs(rows,cols))
+print(unique_routes_DP(rows,cols))
 
-        if break_flag:
-            curr_size = sqr_size-1
-        else:
-            curr_size = sqr_size
-        if curr_size > curr_max:
-            curr_max = curr_size
-        return curr_max
-    
-    max_sqr_size = 0
-    for i in range(len(input_matrix)):
-        for j in range(len(input_matrix[0])):
-            tmp = max_square_from_ij(i,j,input_matrix)
-            if tmp > max_sqr_size:
-                max_sqr_size = tmp
-    return max_sqr_size**2
-            
+
 def wrapper(func, *args):
     def wrapped():
-        return func(args)
+        return func(*args)
     return wrapped
 
 import timeit
-input_matrix = [[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1],[1,1,1,1,1]]
-slow = wrapper(find_largest_square_slow, input_matrix)
-fast = wrapper(find_largest_square, input_matrix)
-print(timeit.timeit(slow, number=1000))
-print(timeit.timeit(fast, number=1000))
-
-print(fast())
+dfs_based = wrapper(unique_routes_dfs, rows, cols)
+dp_based = wrapper(unique_routes_DP, rows, cols)
+print(timeit.timeit(dfs_based, number=100))
+print(timeit.timeit(dp_based, number=100))
