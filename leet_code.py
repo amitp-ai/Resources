@@ -1,5 +1,9 @@
 #test
+https://docs.python.org/3.6/distutils/setupscript.html
+https://docs.python.org/3/tutorial/modules.html#packages
+https://python-packaging-tutorial.readthedocs.io/en/latest/setup_py.html
 
+################
 zza = 1
 
 ##################
